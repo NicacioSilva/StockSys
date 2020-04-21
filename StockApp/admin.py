@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from StockApp.models import *
+
+
+@admin.register(Desktop, Laptop, Mobile)
+class ViewAdmin(admin.ModelAdmin):
+    pass
