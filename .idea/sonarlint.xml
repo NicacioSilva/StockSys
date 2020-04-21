@@ -4,6 +4,7 @@
     <option name="fileExclusions">
       <list>
         <option value="DIRECTORY:StockApp/static" />
+        <option value="DIRECTORY:StockApp/templates" />
       </list>
     </option>
   </component>
