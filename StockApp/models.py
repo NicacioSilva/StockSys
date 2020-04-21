@@ -14,8 +14,8 @@ class Product(models.Model):
         ('RESTOCKING', 'Under Restocking')
     )
 
-    status = models.CharField(max_length=10, choices=choices, default='SOLD')
-    issues = models.CharField(max_length=100, default='No Issues')
+    status = models.CharField(max_length=10, choices=choices, default='AVAILABLE')
+    issues = models.CharField(max_length=100, default='Ok')
 
     def __str__(self):
         # This method will provide string output of your class.

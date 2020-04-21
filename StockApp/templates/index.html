@@ -5,7 +5,7 @@
     <br>
     <div class="button-group">
 
-        <a href="#" class="btn btn-primary btn-md" role="button"> Laptops</a>
+        <a href="{% url 'show_laptops' %}" class="btn btn-primary btn-md" role="button"> Laptops</a>
         <a href="#" class="btn btn-warning btn-sm" role="button"> +</a>
 
         <a href="#" class="btn btn-primary btn-md" role="button"> Desktops</a>
@@ -19,17 +19,30 @@
     <br>
     <table class="table table-hover">
         <thead>
-            <tr>
-                <th>id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Status</th>
-            </tr>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>Issues</th>
+        </tr>
         </thead>
 
-    <tbody>
+        <tbody>
 
-    </tbody>
+        {% for item in items %}
+
+            <tr>
+                <td>{{ item.pk }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.status }}</td>
+                <td>{{ item.issues }}</td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
 
     </table>
 
