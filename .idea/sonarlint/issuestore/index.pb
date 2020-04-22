@@ -63,3 +63,9 @@ A
 StockApp/forms.py,c/c/cc35fbba0abacf1c8a9cc910dc7366c4328fec53
 O
 StockApp/templates/add_new.html,3/d/3d1fd59d7e8d0752eb3a4123dd5bd7d22f665b0b
+L
+StockApp/templates/base.html,c/0/c06e9043d156f76731c7922a821df9032f3ca028
+Q
+!StockApp/templates/edit_item.html,a/7/a7266fd6fbe587d47d455bdb8b9c1cdaabbadc43
+@
+requirements.txt,1/9/19359a61ae2446b51b549167b014da2fcf265768
