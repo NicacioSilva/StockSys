@@ -3,8 +3,7 @@
   <component name="SonarLintProjectSettings">
     <option name="fileExclusions">
       <list>
-        <option value="DIRECTORY:StockApp/static" />
-        <option value="DIRECTORY:StockApp/templates" />
+        <option value="FILE:requirements.txt" />
       </list>
     </option>
   </component>
