@@ -38,13 +38,13 @@ def show_mobiles(request):
     return render(request, 'index.html', context)
 
 
-def add_device(request, cls, item):
+def add_device(request, cls, item, item_url):
     if request.method == 'POST':
         form = cls(request.POST)
 
         if form.is_valid():
             form.save()
-            return redirect('index')
+            return redirect(item_url)
     else:
         form = cls()
         context = {
@@ -55,15 +55,15 @@ def add_device(request, cls, item):
 
 
 def add_laptop(request):
-    return add_device(request, LaptopForm, 'laptop')
+    return add_device(request, LaptopForm, 'laptop', 'show_laptops')
 
 
 def add_desktop(request):
-    return add_device(request, DesktopForm, 'desktop')
+    return add_device(request, DesktopForm, 'desktop', 'show_desktops')
 
 
 def add_mobile(request):
-    return add_device(request, MobileForm, 'mobile')
+    return add_device(request, MobileForm, 'mobile', 'show_mobiles')
 
 
 def edit_device(request, pk, model, cls):
