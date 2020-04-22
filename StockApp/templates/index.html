@@ -6,13 +6,13 @@
     <div class="button-group">
 
         <a href="{% url 'show_laptops' %}" class="btn btn-primary btn-md" role="button"> Laptops</a>
-        <a href="#" class="btn btn-warning btn-sm" role="button"> +</a>
+        <a href="{% url 'add_laptop' %}" class="btn btn-warning btn-sm" role="button"> +</a>
 
         <a href="{% url 'show_desktops' %}" class="btn btn-primary btn-md" role="button"> Desktops</a>
-        <a href="#" class="btn btn-warning btn-sm" role="button"> +</a>
+        <a href="{% url 'add_desktop' %}" class="btn btn-warning btn-sm" role="button"> +</a>
 
         <a href="{% url 'show_mobiles' %}" class="btn btn-primary btn-md" role="button"> Mobiles</a>
-        <a href="#" class="btn btn-warning btn-sm" role="button"> +</a>
+        <a href="{% url 'add_mobile' %}" class="btn btn-warning btn-sm" role="button"> +</a>
 
     </div>
 
@@ -39,6 +39,9 @@
                 <td>{{ item.price }}</td>
                 <td>{{ item.status }}</td>
                 <td>{{ item.issues }}</td>
+                <td>
+                    <a href="#" class="btn btn-warning btn-sm" role="button">Edit</a>
+                </td>
             </tr>
 
         {% endfor %}

@@ -57,3 +57,9 @@ B
 StockApp/urls.py,5/8/580126b7a1b53dc18762a78c56ba8c68fca21e44
 A
 StockApp/views.py,9/d/9d400a454ecee05a0e8a1666e3617d4e87430dd6
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+A
+StockApp/forms.py,c/c/cc35fbba0abacf1c8a9cc910dc7366c4328fec53
+O
+StockApp/templates/add_new.html,3/d/3d1fd59d7e8d0752eb3a4123dd5bd7d22f665b0b
