@@ -1,5 +1,8 @@
 # Stock System
 
+![demoproject](https://user-images.githubusercontent.com/53271864/80030326-6caab180-84be-11ea-800b-6fffca6dc585.gif)
+##
+## Stock System
 This is a simple CRUD that simulates a inventory/stock management system. There are three classes of products at the moment, but you can improve it and create as many as you need.
 You can save, edit, delete items. It's also possible to import and 
 export a large amount of data at once, like spreadsheets or .csv files. 
