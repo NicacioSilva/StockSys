@@ -69,7 +69,6 @@ def add_mobile(request):
 def edit_device(request, pk, model, cls, item_type, item_url):
     item = get_object_or_404(model, pk=pk)
 
-
     if request.method == 'POST':
         form = cls(request.POST, instance=item)
         if form.is_valid():
@@ -95,3 +94,18 @@ def edit_desktop(request, pk):
 
 def edit_mobile(request, pk):
     return edit_device(request, pk, Mobile, MobileForm, 'mobile', 'show_mobiles')
+
+
+def delete_laptop(request, pk):
+    Laptop.objects.filter(id=pk).delete()
+    return redirect('show_laptops')
+
+
+def delete_desktop(request, pk):
+    Desktop.objects.filter(id=pk).delete()
+    return redirect('show_desktops')
+
+
+def delete_mobile(request, pk):
+    Mobile.objects.filter(id=pk).delete()
+    return redirect('show_mobiles')
