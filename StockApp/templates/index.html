@@ -39,9 +39,19 @@
                 <td>{{ item.price }}</td>
                 <td>{{ item.status }}</td>
                 <td>{{ item.issues }}</td>
+                {% if header|lower == "laptops" %}
                 <td>
-                    <a href="#" class="btn btn-warning btn-sm" role="button">Edit</a>
+                    <a href="{% url 'edit_laptop' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
                 </td>
+                {% elif header|lower == "desktops" %}
+                <td>
+                    <a href="{% url 'edit_desktop' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                </td>
+                {% else %}
+                <td>
+                    <a href="{% url 'edit_mobile' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                </td>
+                {% endif %}
             </tr>
 
         {% endfor %}

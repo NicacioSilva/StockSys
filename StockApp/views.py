@@ -66,25 +66,32 @@ def add_mobile(request):
     return add_device(request, MobileForm, 'mobile', 'show_mobiles')
 
 
-def edit_device(request, pk, model, cls):
+def edit_device(request, pk, model, cls, item_type, item_url):
     item = get_object_or_404(model, pk=pk)
+
 
     if request.method == 'POST':
         form = cls(request.POST, instance=item)
         if form.is_valid():
             form.save()
-            return redirect('index')
+            return redirect(item_url)
 
     else:
         form = cls(instance=item)
+        context = {
+            'form': form,
+            'header': item_type,
+        }
+        return render(request, 'edit_item.html', context)
 
-        return render(request, 'edit_item.html', {'form': form})
 
 def edit_laptop(request, pk):
-    return edit_device(request, pk, Laptop, LaptopForm)
+    return edit_device(request, pk, Laptop, LaptopForm, 'laptop', 'show_laptops')
+
 
 def edit_desktop(request, pk):
-    return edit_device(request, pk, Laptop, LaptopForm)
+    return edit_device(request, pk, Desktop, DesktopForm, 'desktop', 'show_desktops')
+
 
 def edit_mobile(request, pk):
-    return edit_device(request, pk, Laptop, LaptopForm)
+    return edit_device(request, pk, Mobile, MobileForm, 'mobile', 'show_mobiles')
