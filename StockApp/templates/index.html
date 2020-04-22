@@ -41,21 +41,24 @@
                 <td>{{ item.status }}</td>
                 <td>{{ item.issues }}</td>
                 {% if header|lower == "laptops" %}
-                <td>
-                    <a href="{% url 'edit_laptop' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                    <a href="{% url 'delete_laptop' item.pk %}" class="btn btn-danger btn-sm" role="button">Delete</a>
-                </td>
+                    <td>
+                        <a href="{% url 'edit_laptop' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                        <a href="{% url 'delete_laptop' item.pk %}" class="btn btn-danger btn-sm"
+                           role="button">Delete</a>
+                    </td>
                 {% elif header|lower == "desktops" %}
-                <td>
-                    <a href="{% url 'edit_desktop' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                    <a href="{% url 'delete_desktop' item.pk %}" class="btn btn-danger btn-sm" role="button">Delete</a>
+                    <td>
+                        <a href="{% url 'edit_desktop' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                        <a href="{% url 'delete_desktop' item.pk %}" class="btn btn-danger btn-sm"
+                           role="button">Delete</a>
 
-                </td>
+                    </td>
                 {% else %}
-                <td>
-                    <a href="{% url 'edit_mobile' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                    <a href="{% url 'delete_mobile' item.pk %}" class="btn btn-danger btn-sm" role="button">Delete</a>
-                </td>
+                    <td>
+                        <a href="{% url 'edit_mobile' item.pk %}" class="btn btn-warning btn-sm" role="button">Edit</a>
+                        <a href="{% url 'delete_mobile' item.pk %}" class="btn btn-danger btn-sm"
+                           role="button">Delete</a>
+                    </td>
                 {% endif %}
             </tr>
 
