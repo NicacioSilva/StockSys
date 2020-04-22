@@ -54,7 +54,7 @@ Run the server.
 python manage.py runserver
 ```
 Now some kind of link must jump from your prompt. Copy it, past in your browser and rave fun!
-
+![runserver](https://user-images.githubusercontent.com/53271864/80029360-0e310380-84bd-11ea-8e1a-1326c4dc97aa.gif)
 ##
 ## Running the tests
 
